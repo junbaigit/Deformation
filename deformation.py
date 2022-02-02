@@ -51,7 +51,11 @@ class deformation:
     @param： H： h x w x d
     @return： MH， DH （same dimension as input image）MH is mask， DH is direction map
     """
-    pass
+    trans_H = self.transfer(H)
+    Pmi = 0
+    Pmi = min(sum(self.Ep() + self.Ed()))
+    
+    return Pmi
   
   def interpolate(self):
     pass
